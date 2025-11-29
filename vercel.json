@@ -1,0 +1,15 @@
+{
+  "buildCommand": "go build -o api ./cmd/main.go",
+  "outputDirectory": ".",
+  "functions": {
+    "api/**/*.go": {
+      "runtime": "go",
+      "memory": 1024,
+      "maxDuration": 60
+    }
+  },
+  "env": {
+    "DATABASE_URL": "@database_url",
+    "JWT_SECRET": "@jwt_secret"
+  }
+}
